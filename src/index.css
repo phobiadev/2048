@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  button:not(.debug) {
+    @apply px-[20px] bg-[#eee4da] rounded-md py-[10px] m-[2px] border-[#bbada0] text-[#998e84] font-bold hover:brightness-90 active:brightness-75
+  }
+  button.debug {
+    @apply px-[20px] bg-violet-400 rounded-md py-[10px] m-[2px] text-violet-200 font-bold hover:brightness-90 active:brightness-75
+  }
+}
+
+
+.over-trs {
+  transition: all .35s cubic-bezier(0, 0.56, 0.34, 1.28);
+}
+
+
+.trs {
+  transition: all .15s cubic-bezier(0.25, 0.1, 0, 1.84)
+}
+
+.grid-container {
+  transform: scale(1.8);
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 0;
+  margin-top: 70px
+}
+
+#grid.disabled {
+  filter: grayscale(100%) brightness(65%);
+}
+
+@media (max-width: 1400px) {
+  .grid-container {
+    transform: scale(1.6)
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    transform: scale(1.2)
+  }
+}
